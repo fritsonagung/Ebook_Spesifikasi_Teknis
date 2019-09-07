@@ -9,7 +9,7 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="74dp"
+        android:layout_height="@dimen/_60sdp"
         android:background="@android:color/transparent"
         app:elevation="0dp">
 
@@ -17,7 +17,6 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:layout_marginBottom="@dimen/_25sdp"
             android:background="@null"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 

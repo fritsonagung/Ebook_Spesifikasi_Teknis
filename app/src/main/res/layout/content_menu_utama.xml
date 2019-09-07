@@ -22,6 +22,7 @@
             android:queryHint="Pencarian"
             app:queryHint="Pencarian"
             app:defaultQueryHint="Pencarian"
+            android:focusable="false"
             app:iconifiedByDefault="false"
             tools:ignore="MissingConstraints">
         </androidx.appcompat.widget.SearchView>
@@ -89,7 +90,7 @@
                     android:layout_width="@dimen/_5sdp"
                     android:layout_height="@dimen/_20sdp"
                     android:layout_marginLeft="@dimen/_12sdp"
-                    android:background="@android:color/holo_red_dark">
+                    android:background="@color/merah">
                 </View>
 
                 <TextView

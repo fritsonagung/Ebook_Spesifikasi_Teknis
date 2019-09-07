@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_nav_header">
+
+        <TextView
+            android:id="@+id/txt_jadwal_solat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="jadwal"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_waktu_solat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/garis"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="10 : 20"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/garis"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/txt_jadwal_solat"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

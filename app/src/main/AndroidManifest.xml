@@ -12,9 +12,7 @@
         <activity
             android:name=".MenuUtama"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".NextActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>

@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Spesifikasi Teknis</string>
-    <string name="nama_app">Spesifikasi</string>
     <string name="nama_app2">Teknis</string>
     <string name="title_activity_menu_utama">MenuUtama</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -18,4 +17,6 @@
     <string name="menu_send">Send</string>
     <string name="website_telkom">www.telkom.co.id</string>
     <string name="telkom_indonesia">Telkom Indonesia</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="menu_share">Share</string>
 </resources>

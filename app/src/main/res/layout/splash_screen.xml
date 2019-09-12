@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/logo_telkom"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_60sdp"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
         android:layout_marginStart="@dimen/_6sdp"
         android:layout_marginLeft="@dimen/_6sdp"
         android:src="@drawable/telkom_logo"
@@ -18,30 +18,16 @@
 
     <TextView
         android:id="@+id/nama_app"
-        android:layout_width="@dimen/_130sdp"
-        android:layout_height="@dimen/_60sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginLeft="@dimen/_6sdp"
         android:layout_toEndOf="@id/logo_telkom"
         android:layout_toRightOf="@id/logo_telkom"
         android:fontFamily="@font/nunito_regular"
         android:gravity="center"
-        android:text="@string/nama_app"
         android:textColor="@color/abu_abu"
-        android:textSize="@dimen/_24ssp"
-        android:textStyle="italic" />
-
-    <TextView
-        android:id="@+id/nama_app2"
-        android:layout_width="@dimen/_72sdp"
-        android:layout_height="@dimen/_60sdp"
-        android:layout_marginEnd="@dimen/_6sdp"
-        android:layout_marginRight="@dimen/_6sdp"
-        android:layout_toEndOf="@id/nama_app"
-        android:layout_toRightOf="@id/nama_app"
-        android:fontFamily="@font/nunito_regular"
-        android:gravity="center"
-        android:text="@string/nama_app2"
-        android:textColor="@color/merah"
-        android:textSize="@dimen/_24ssp"
+        android:textSize="@dimen/_18ssp"
         android:textStyle="italic" />
 
 </RelativeLayout>

@@ -2,9 +2,6 @@ package id.co.telkom.ebookspesifikasiteknis;
 
 import android.os.Bundle;
 
-import android.widget.ImageButton;
-
-
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -15,18 +12,10 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.ArrayList;
-
-import id.co.telkom.ebookspesifikasiteknis.Model.Model_Thumbnail;
 
 
 public class MenuUtama  extends AppCompatActivity{
 
-    private RecyclerView rvThumb1,rvThumb2;
-    private ArrayList<Model_Thumbnail> list;
-    private ImageButton viewall, viewall2;
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -41,8 +30,8 @@ public class MenuUtama  extends AppCompatActivity{
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send)
+                R.id.nav_beranda, R.id.nav_ftth, R.id.nav_feeder,
+                R.id.nav_distribusi, R.id.nav_drop, R.id.nav_simulasi, R.id.nav_share, R.id.nav_send)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

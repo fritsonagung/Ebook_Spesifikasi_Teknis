@@ -1,4 +1,4 @@
-package id.co.telkom.ebookspesifikasiteknis.ui.gallery;
+package id.co.telkom.ebookspesifikasiteknis.ui.SegementFeeder;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import id.co.telkom.ebookspesifikasiteknis.R;
 
-public class GalleryFragment extends Fragment {
+public class SegmentFeederFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
+    private SegmentFeederViewModel slideshowViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        galleryViewModel.getText().observe(this, new Observer<String>() {
+        slideshowViewModel =
+                ViewModelProviders.of(this).get(SegmentFeederViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_segment_feeder, container, false);
+        final TextView textView = root.findViewById(R.id.text_slideshow);
+        slideshowViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

@@ -1,9 +1,10 @@
-package id.co.telkom.ebookspesifikasiteknis.ui.tools;
+package id.co.telkom.ebookspesifikasiteknis.ui.OverviewFTTH;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -14,22 +15,25 @@ import androidx.lifecycle.ViewModelProviders;
 
 import id.co.telkom.ebookspesifikasiteknis.R;
 
-public class ToolsFragment extends Fragment {
+public class OverviewFTTHFragment extends Fragment {
 
-    private ToolsViewModel toolsViewModel;
+    private OverviewFTTHViewModel galleryViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_tools, container, false);
-        final TextView textView = root.findViewById(R.id.text_tools);
-        toolsViewModel.getText().observe(this, new Observer<String>() {
+        galleryViewModel =
+                ViewModelProviders.of(this).get(OverviewFTTHViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_ftth, container, false);
+        final TextView textView = root.findViewById(R.id.text_gallery);
+        galleryViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
         });
+
+        final WebView webView = root.findViewById(R.id.webview);
+        webView.loadUrl("file:///android_asset/test.html");
         return root;
     }
 }

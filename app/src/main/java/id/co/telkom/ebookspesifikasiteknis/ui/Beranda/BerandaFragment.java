@@ -47,7 +47,7 @@ public class BerandaFragment extends Fragment {
             public void onClick(View v) {
                 SegmentFeederFragment segmentFeederFragment = new SegmentFeederFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(((ViewGroup)getView().getParent()).getId(), segmentFeederFragment, "findThisFragment")
+                        .replace(((ViewGroup)getView().getParent()).getId(), segmentFeederFragment, "findThisFragment2")
                         .addToBackStack(null)
                         .commit();
             }
@@ -59,7 +59,7 @@ public class BerandaFragment extends Fragment {
             public void onClick(View v) {
                 SegmentDistribusiFragment segmentDistribusiFragment = new SegmentDistribusiFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(((ViewGroup)getView().getParent()).getId(), segmentDistribusiFragment, "findThisFragment")
+                        .replace(((ViewGroup)getView().getParent()).getId(), segmentDistribusiFragment, "findThisFragment3")
                         .addToBackStack(null)
                         .commit();
             }
@@ -71,7 +71,7 @@ public class BerandaFragment extends Fragment {
             public void onClick(View v) {
                SegmentDropFragment segmentDropFragment = new SegmentDropFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(((ViewGroup)getView().getParent()).getId(), segmentDropFragment, "findThisFragment")
+                        .replace(((ViewGroup)getView().getParent()).getId(), segmentDropFragment, "findThisFragment4")
                         .addToBackStack(null)
                         .commit();
             }
@@ -83,7 +83,7 @@ public class BerandaFragment extends Fragment {
             public void onClick(View v) {
                 SimulasiPowerLinkFragment simulasiPowerLinkFragment = new SimulasiPowerLinkFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(((ViewGroup)getView().getParent()).getId(), simulasiPowerLinkFragment, "findThisFragment")
+                        .replace(((ViewGroup)getView().getParent()).getId(), simulasiPowerLinkFragment, "findThisFragment5")
                         .addToBackStack(null)
                         .commit();
             }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/merah"/>
-    <corners android:radius="5dp"/>
-    <item android:color="@color/merah" android:state_checked="true" />
-    <item android:color="@color/abu_abu" android:state_checked="false"/>
-</shape>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:drawable="@color/merah_gelap"/>
+    <item android:state_pressed="true" android:drawable="@color/merah_gelap" />
+    <item android:drawable="@drawable/bg_shape_button_menu_utama"/>
+</selector>

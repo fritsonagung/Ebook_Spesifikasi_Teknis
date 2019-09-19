@@ -17,7 +17,7 @@
             <LinearLayout
                 android:id="@+id/button_overview_ftth"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_50sdp"
+                android:layout_height="@dimen/_60sdp"
                 android:layout_margin="@dimen/_6sdp"
                 android:background="@drawable/bg_button_menu_utama"
                 android:gravity="center"
@@ -39,7 +39,7 @@
             <LinearLayout
                 android:id="@+id/button_segment_feeder"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_50sdp"
+                android:layout_height="@dimen/_60sdp"
                 android:layout_margin="@dimen/_6sdp"
                 android:background="@drawable/bg_button_menu_utama"
                 tools:ignore="MissingConstraints">
@@ -60,7 +60,7 @@
             <LinearLayout
                 android:id="@+id/button_segment_distribusi"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_50sdp"
+                android:layout_height="@dimen/_60sdp"
                 android:layout_margin="@dimen/_6sdp"
                 android:background="@drawable/bg_button_menu_utama"
                 tools:ignore="MissingConstraints">
@@ -81,7 +81,7 @@
             <LinearLayout
                 android:id="@+id/button_segment_drop"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_50sdp"
+                android:layout_height="@dimen/_60sdp"
                 android:layout_margin="@dimen/_6sdp"
                 android:background="@drawable/bg_button_menu_utama"
                 tools:ignore="MissingConstraints">
@@ -102,7 +102,7 @@
             <LinearLayout
                 android:id="@+id/button_sim_power_link"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_50sdp"
+                android:layout_height="@dimen/_60sdp"
                 android:layout_margin="@dimen/_6sdp"
                 android:background="@drawable/bg_button_menu_utama"
                 tools:ignore="MissingConstraints">

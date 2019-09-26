@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
                 android:layout_margin="@dimen/_6sdp"
-                android:background="@drawable/bg_button_menu_utama"
+                android:background="@drawable/bg_button_select"
                 android:gravity="center"
                 tools:ignore="MissingConstraints">
 
@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
                 android:layout_margin="@dimen/_6sdp"
-                android:background="@drawable/bg_button_menu_utama"
+                android:background="@drawable/bg_button_select"
                 tools:ignore="MissingConstraints">
 
                 <TextView
@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
                 android:layout_margin="@dimen/_6sdp"
-                android:background="@drawable/bg_button_menu_utama"
+                android:background="@drawable/bg_button_select"
                 tools:ignore="MissingConstraints">
 
                 <TextView
@@ -83,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
                 android:layout_margin="@dimen/_6sdp"
-                android:background="@drawable/bg_button_menu_utama"
+                android:background="@drawable/bg_button_select"
                 tools:ignore="MissingConstraints">
 
                 <TextView
@@ -104,7 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
                 android:layout_margin="@dimen/_6sdp"
-                android:background="@drawable/bg_button_menu_utama"
+                android:background="@drawable/bg_button_select"
                 tools:ignore="MissingConstraints">
 
                 <TextView

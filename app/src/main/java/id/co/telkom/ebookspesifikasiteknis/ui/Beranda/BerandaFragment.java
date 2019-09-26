@@ -7,8 +7,15 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
@@ -24,6 +31,7 @@ import id.co.telkom.ebookspesifikasiteknis.ui.SimulasiPowerLink.SimulasiPowerLin
 public class BerandaFragment extends Fragment {
 
     private LinearLayout ftth,feeder,distribusi,drop,simulasi;
+    private AppBarConfiguration mAppBarConfiguration;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -91,4 +99,5 @@ public class BerandaFragment extends Fragment {
 
         return root;
     }
+
 }

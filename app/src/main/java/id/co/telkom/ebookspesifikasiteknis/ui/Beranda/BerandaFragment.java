@@ -31,7 +31,6 @@ import id.co.telkom.ebookspesifikasiteknis.ui.SimulasiPowerLink.SimulasiPowerLin
 public class BerandaFragment extends Fragment {
 
     private LinearLayout ftth,feeder,distribusi,drop,simulasi;
-    private AppBarConfiguration mAppBarConfiguration;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

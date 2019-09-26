@@ -1,51 +1,76 @@
 package id.co.telkom.ebookspesifikasiteknis;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.navigation.NavigationView;
+import android.view.View;
 
-import androidx.drawerlayout.widget.DrawerLayout;
+import android.widget.LinearLayout;
+import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
+public class MenuUtama extends AppCompatActivity {
 
-public class MenuUtama  extends AppCompatActivity{
-
-    private AppBarConfiguration mAppBarConfiguration;
+    private LinearLayout ftth, feeder, distribusi, drop, simulasi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_utama);
+        setContentView(R.layout.menu_utama);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_beranda, R.id.nav_ftth, R.id.nav_feeder,
-                R.id.nav_distribusi, R.id.nav_drop, R.id.nav_simulasi)
-                .setDrawerLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+        setTitle("Menu Utama");
+        
+        ftth = findViewById(R.id.button_overview_ftth);
+        ftth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuUtama.this, OverviewFTTH.class);
+                startActivity(intent);
+            }
+        });
+
+        feeder = findViewById(R.id.button_segment_feeder);
+        feeder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuUtama.this, SegmentFeeder.class);
+                startActivity(intent);
+            }
+        });
+
+        distribusi = findViewById(R.id.button_segment_distribusi);
+        distribusi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuUtama.this, SegmentDistribusi.class);
+                startActivity(intent);
+            }
+        });
+
+        drop = findViewById(R.id.button_segment_drop);
+        drop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuUtama.this, SegmentDrop.class);
+                startActivity(intent);
+            }
+        });
+
+        simulasi = findViewById(R.id.button_sim_power_link);
+        simulasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuUtama.this, SimulasiPowerLink.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
+    private void setSupportActionBar(Toolbar toolbar) {
     }
-
 
 }

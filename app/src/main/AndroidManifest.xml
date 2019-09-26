@@ -11,10 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MenuUtama"
-            android:label=""
-            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MenuUtama"/>
+        <activity android:name=".OverviewFTTH"/>
+        <activity android:name=".SegmentFeeder"/>
+        <activity android:name=".SegmentDistribusi"/>
+        <activity android:name=".SegmentDrop"/>
+        <activity android:name=".SimulasiPowerLink"/>
     </application>
 
 </manifest>

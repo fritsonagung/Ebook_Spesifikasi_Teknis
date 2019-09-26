@@ -31,7 +31,7 @@ public class MenuUtama  extends AppCompatActivity{
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_beranda, R.id.nav_ftth, R.id.nav_feeder,
-                R.id.nav_distribusi, R.id.nav_drop, R.id.nav_simulasi, R.id.nav_share, R.id.nav_send)
+                R.id.nav_distribusi, R.id.nav_drop, R.id.nav_simulasi)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

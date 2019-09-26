@@ -5,16 +5,183 @@
     android:layout_height="match_parent"
     android:background="@color/putih">
 
-    <TextView
-        android:id="@+id/text_simulasi"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/button_overview_ftth"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_6sdp"
+            android:background="@drawable/bg_button_menu_utama"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center_vertical"
+                android:text="TX"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/_15ssp" />
+
+            <EditText
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:hint="Masukan Tx"
+                android:textColorHint="@color/putih"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_segment_feeder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_6sdp"
+            android:background="@drawable/bg_button_menu_utama"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center_vertical"
+                android:text="TX"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/_15ssp" />
+
+            <EditText
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:hint="Masukan Tx"
+                android:textColorHint="@color/putih"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center_vertical"
+                android:text="X"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/_15ssp" />
+
+            <EditText
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:hint="Masukan Tx"
+                android:textColorHint="@color/putih"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_segment_distribusi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_6sdp"
+            android:background="@drawable/bg_button_menu_utama"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center_vertical"
+                android:text="TX"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/_15ssp" />
+
+            <EditText
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:hint="Masukan Tx"
+                android:textColorHint="@color/putih"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_segment_drop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_6sdp"
+            android:background="@drawable/bg_button_menu_utama"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center_vertical"
+                android:text="TX"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/_15ssp" />
+
+            <EditText
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:hint="Masukan Tx"
+                android:textColorHint="@color/putih"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_sim_power_link"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_6sdp"
+            android:background="@drawable/bg_button_menu_utama"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center_vertical"
+                android:text="TX"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/_15ssp" />
+
+            <EditText
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:hint="Masukan Tx"
+                android:textColorHint="@color/putih"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

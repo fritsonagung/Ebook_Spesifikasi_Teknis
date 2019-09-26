@@ -24,13 +24,7 @@ public class SimulasiPowerLinkFragment extends Fragment {
         simulasiViewModel =
                 ViewModelProviders.of(this).get(SimulasiPoweLinkViewModel.class);
         View root = inflater.inflate(R.layout.fragment_simulasi, container, false);
-        final TextView textView = root.findViewById(R.id.text_simulasi);
-        simulasiViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
     }
 }

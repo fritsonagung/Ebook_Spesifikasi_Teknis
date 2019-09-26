@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -249,6 +250,17 @@
                 android:textSize="@dimen/_15ssp" />
 
         </RelativeLayout>
+
+
+        <Button
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="Hitung RX"
+            android:fontFamily="@font/nunito_regular"
+            android:textSize="@dimen/_15ssp"
+            android:background="@drawable/bg_shape_button"
+            android:textColor="@color/putih"/>
 
     </LinearLayout>
 

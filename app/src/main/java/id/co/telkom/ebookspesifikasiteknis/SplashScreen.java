@@ -15,7 +15,6 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_screen);
 
-
         String nama_apps = "<font color=#707070>Spesifikasi</font> <font color=#D51200>Teknis</font>";
         TextView nama_app = findViewById(R.id.nama_app);
         nama_app.setText(Html.fromHtml(nama_apps));

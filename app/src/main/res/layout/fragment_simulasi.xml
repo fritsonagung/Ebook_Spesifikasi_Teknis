@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih">
@@ -10,177 +11,244 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/button_overview_ftth"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp"
-            android:layout_margin="@dimen/_6sdp"
-            android:background="@drawable/bg_button_menu_utama"
-            android:orientation="horizontal">
-
-            <TextView
-
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:fontFamily="@font/nunito_regular"
-                android:gravity="center_vertical"
-                android:text="TX"
-                android:textColor="@color/putih"
-                android:textSize="@dimen/_15ssp" />
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@drawable/bg_simulasi_powerlink"
+            android:gravity="center_horizontal">
 
             <EditText
-                android:layout_width="@dimen/_200sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:gravity="center_vertical"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:hint="Masukan Tx"
-                android:textColorHint="@color/putih"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/button_segment_feeder"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp"
-            android:layout_margin="@dimen/_6sdp"
-            android:background="@drawable/bg_button_menu_utama"
-            android:orientation="horizontal">
+                android:id="@+id/et_tx"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_toEndOf="@id/txt_tx"
+                android:layout_toRightOf="@id/txt_tx"
+                android:background="@drawable/edittext_border"
+                android:gravity="center_horizontal"
+                android:inputType="numberDecimal"
+                android:padding="@dimen/_5sdp"
+                android:textColorHint="@color/abu_abu" />
 
             <TextView
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:fontFamily="@font/nunito_regular"
-                android:gravity="center_vertical"
-                android:text="TX"
-                android:textColor="@color/putih"
-                android:textSize="@dimen/_15ssp" />
-
-            <EditText
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:gravity="center_vertical"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:hint="Masukan Tx"
-                android:textColorHint="@color/putih"/>
-
-            <TextView
+                android:id="@+id/txt_tx"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
                 android:fontFamily="@font/nunito_regular"
                 android:gravity="center_vertical"
-                android:text="X"
-                android:textColor="@color/putih"
-                android:textSize="@dimen/_15ssp" />
-
-            <EditText
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:gravity="center_vertical"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:hint="Masukan Tx"
-                android:textColorHint="@color/putih"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/button_segment_distribusi"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp"
-            android:layout_margin="@dimen/_6sdp"
-            android:background="@drawable/bg_button_menu_utama"
-            android:orientation="horizontal">
-
-            <TextView
-
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:fontFamily="@font/nunito_regular"
-                android:gravity="center_vertical"
+                android:padding="@dimen/_5sdp"
                 android:text="TX"
                 android:textColor="@color/putih"
                 android:textSize="@dimen/_15ssp" />
 
-            <EditText
-                android:layout_width="@dimen/_200sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:gravity="center_vertical"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:hint="Masukan Tx"
-                android:textColorHint="@color/putih"/>
+        </RelativeLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/button_segment_drop"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp"
-            android:layout_margin="@dimen/_6sdp"
-            android:background="@drawable/bg_button_menu_utama"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:gravity="center"
+            android:background="@drawable/bg_simulasi_powerlink">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_pk"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_pk"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border"
+                    android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/_5sdp"
+                    android:textColorHint="@color/abu_abu" />
+
+                <TextView
+                    android:id="@+id/txt_def_pk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nunito_regular"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="X    0.35    ="
+                    android:textColor="@color/putih"
+                    android:textSize="@dimen/_15ssp" />
+
+                <EditText
+                    android:id="@+id/et_hsl_pk"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:textColorHint="@color/abu_abu"
+                    tools:ignore="UnknownId" />
+
+            </LinearLayout>
 
             <TextView
-
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginLeft="@dimen/_5sdp"
+                android:id="@+id/txt_pk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/_5sdp"
                 android:fontFamily="@font/nunito_regular"
-                android:gravity="center_vertical"
-                android:text="TX"
+                android:padding="@dimen/_5sdp"
+                android:text="Panjang Kabel"
                 android:textColor="@color/putih"
                 android:textSize="@dimen/_15ssp" />
 
-            <EditText
-                android:layout_width="@dimen/_200sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:gravity="center_vertical"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:hint="Masukan Tx"
-                android:textColorHint="@color/putih"/>
+        </RelativeLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/button_sim_power_link"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp"
-            android:layout_margin="@dimen/_6sdp"
-            android:background="@drawable/bg_button_menu_utama"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@drawable/bg_simulasi_powerlink">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_js"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_js"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border"
+                    android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/_5sdp"
+                    android:textColorHint="@color/abu_abu" />
+
+                <TextView
+                    android:id="@+id/txt_def_js"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nunito_regular"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="X    0.1    ="
+                    android:textColor="@color/putih"
+                    android:textSize="@dimen/_15ssp" />
+
+                <EditText
+                    android:id="@+id/et_hsl_js"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:textColorHint="@color/abu_abu"
+                    tools:ignore="UnknownId" />
+
+            </LinearLayout>
 
             <TextView
-
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginLeft="@dimen/_5sdp"
+                android:id="@+id/txt_js"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/_5sdp"
                 android:fontFamily="@font/nunito_regular"
-                android:gravity="center_vertical"
-                android:text="TX"
+                android:padding="@dimen/_5sdp"
+                android:text="Jumlah Sambungan"
                 android:textColor="@color/putih"
                 android:textSize="@dimen/_15ssp" />
 
-            <EditText
-                android:layout_width="@dimen/_200sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:gravity="center_vertical"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:hint="Masukan Tx"
-                android:textColorHint="@color/putih"/>
+        </RelativeLayout>
 
-        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@drawable/bg_simulasi_powerlink">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_jk"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_jk"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border"
+                    android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/_5sdp"
+                    android:textColorHint="@color/abu_abu" />
+
+                <TextView
+                    android:id="@+id/txt_def_jk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nunito_regular"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="X    0.25    ="
+                    android:textColor="@color/putih"
+                    android:textSize="@dimen/_15ssp" />
+
+                <EditText
+                    android:id="@+id/et_hsl_jk"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:textColorHint="@color/abu_abu"
+                    tools:ignore="UnknownId" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_jk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="@font/nunito_regular"
+                android:padding="@dimen/_5sdp"
+                android:text="Jumlah Konektor"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/_15ssp" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 

@@ -19,6 +19,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/layout_tx"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_2sdp"
@@ -53,6 +54,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/layout_pjngkabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_2sdp"
@@ -123,6 +125,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/layout_jmlsambungan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_2sdp"
@@ -192,6 +195,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/layout_jmlkonektor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_2sdp"
@@ -260,6 +264,7 @@
             </RelativeLayout>
 
             <Button
+                android:id="@+id/button_hitungrx"
                 android:layout_width="@dimen/_200sdp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
@@ -270,6 +275,7 @@
                 android:textSize="@dimen/_15ssp" />
 
             <RelativeLayout
+                android:id="@+id/layout_rx"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_2sdp"

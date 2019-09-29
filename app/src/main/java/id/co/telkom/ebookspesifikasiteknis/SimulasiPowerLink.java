@@ -61,8 +61,13 @@ public class SimulasiPowerLink extends AppCompatActivity {
         edt_knk = findViewById(R.id.et_jk);
 
         et_hasilpk = findViewById(R.id.et_hsl_pk);
+        et_hasilpk.setVisibility(View.GONE);
+
         et_hasilsbn = findViewById(R.id.et_hsl_js);
+        et_hasilsbn.setVisibility(View.GONE);
+
         et_hasilknk = findViewById(R.id.et_hsl_jk);
+        et_hasilknk.setVisibility(View.GONE);
 
         txt_rx = findViewById(R.id.txt_rumus_rx);
 
@@ -110,8 +115,13 @@ public class SimulasiPowerLink extends AppCompatActivity {
 
 
             et_hasilpk.setText(Double.toString(Double.parseDouble(new DecimalFormat("##.##").format(hasil_pk))));
+            et_hasilpk.setVisibility(View.VISIBLE);
+
             et_hasilsbn.setText(Double.toString(Double.parseDouble(new DecimalFormat("##.##").format(hasil_sbn))));
+            et_hasilsbn.setVisibility(View.VISIBLE);
+
             et_hasilknk.setText(Double.toString(Double.parseDouble(new DecimalFormat("##.##").format(hasil_knk))));
+            et_hasilknk.setVisibility(View.VISIBLE);
 
             et_hasilrx.setText(Double.toString(Double.parseDouble(new DecimalFormat("##.##").format(rx))));
 

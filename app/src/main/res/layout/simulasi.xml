@@ -48,8 +48,7 @@
                     android:layout_margin="@dimen/_5sdp"
                     android:background="@drawable/edittext_border"
                     android:inputType="numberDecimal"
-                    android:padding="@dimen/_5sdp"
-                    android:textColorHint="@color/abu_abu" />
+                    android:padding="@dimen/_5sdp" />
 
             </RelativeLayout>
 
@@ -92,8 +91,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/edittext_border"
                         android:inputType="numberDecimal"
-                        android:padding="@dimen/_5sdp"
-                        android:textColorHint="@color/abu_abu" />
+                        android:padding="@dimen/_5sdp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -176,8 +174,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/edittext_border"
                         android:inputType="numberDecimal"
-                        android:padding="@dimen/_5sdp"
-                        android:textColorHint="@color/abu_abu" />
+                        android:padding="@dimen/_5sdp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -260,8 +257,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/edittext_border"
                         android:inputType="numberDecimal"
-                        android:padding="@dimen/_5sdp"
-                        android:textColorHint="@color/abu_abu" />
+                        android:padding="@dimen/_5sdp" />
 
                     <TextView
                         android:layout_width="wrap_content"

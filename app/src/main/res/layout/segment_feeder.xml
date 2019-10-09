@@ -13,18 +13,13 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
-            android:id="@+id/txt_distibusi"
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_feeder"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:text="Coming Soon"
-            android:textColor="@color/hitam"
-            tools:ignore="MissingConstraints" />
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_2sdp"
+            android:padding="@dimen/_5sdp"/>
 
     </RelativeLayout>
 

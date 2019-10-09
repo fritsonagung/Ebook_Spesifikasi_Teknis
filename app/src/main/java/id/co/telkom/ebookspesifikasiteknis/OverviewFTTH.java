@@ -34,8 +34,6 @@ public class OverviewFTTH extends AppCompatActivity {
             }
         });
 
-        final WebView webView = findViewById(R.id.webview);
-        webView.loadUrl("file:///android_asset/test.html");
 
     }
 }

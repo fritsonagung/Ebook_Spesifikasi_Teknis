@@ -1,11 +1,37 @@
 package id.co.telkom.ebookspesifikasiteknis.model;
 
-public class ModelSegmentFeeder {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class ModelSegmentFeeder implements Parcelable {
 
     private int id;
     private String judul_segment_feeder;
     private String materi_segment_feeder;
     private int gambar;
+
+    public ModelSegmentFeeder(Parcel in) {
+        id = in.readInt();
+        judul_segment_feeder = in.readString();
+        materi_segment_feeder = in.readString();
+        gambar = in.readInt();
+    }
+
+    public static final Creator<ModelSegmentFeeder> CREATOR = new Creator<ModelSegmentFeeder>() {
+        @Override
+        public ModelSegmentFeeder createFromParcel(Parcel in) {
+            return new ModelSegmentFeeder(in);
+        }
+
+        @Override
+        public ModelSegmentFeeder[] newArray(int size) {
+            return new ModelSegmentFeeder[size];
+        }
+    };
+
+    public ModelSegmentFeeder() {
+
+    }
 
     public int getId() {
         return id;
@@ -37,5 +63,18 @@ public class ModelSegmentFeeder {
 
     public void setGambar(int gambar) {
         this.gambar = gambar;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(judul_segment_feeder);
+        dest.writeString(materi_segment_feeder);
+        dest.writeInt(gambar);
     }
 }

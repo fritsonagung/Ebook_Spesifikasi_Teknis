@@ -1,5 +1,6 @@
 package id.co.telkom.ebookspesifikasiteknis;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -17,7 +18,8 @@ import id.co.telkom.ebookspesifikasiteknis.presenter.PresenterSegmentFeederImp;
 import id.co.telkom.ebookspesifikasiteknis.view.ViewSegmentFeeder;
 
 
-public class SegmentFeeder extends AppCompatActivity implements ViewSegmentFeeder {
+public class SegmentFeeder extends AppCompatActivity implements ViewSegmentFeeder,
+        AdapterSegmentFeeder.OnCallbackListener {
 
     private List<ModelSegmentFeeder> segmentFeedersList = new ArrayList<>();
     private PresenterSegmentFeeder presenter;
@@ -53,17 +55,22 @@ public class SegmentFeeder extends AppCompatActivity implements ViewSegmentFeede
         recyclerView = findViewById(R.id.rc_feeder);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new AdapterSegmentFeeder(segmentFeedersList);
+        adapter = new AdapterSegmentFeeder(this, segmentFeedersList, this);
         recyclerView.setAdapter(adapter);
 
-
         presenter.load();
-
     }
 
     @Override
     public void onLoad(List<ModelSegmentFeeder> segmentFeeders) {
         segmentFeedersList.clear();
         segmentFeedersList.addAll(segmentFeeders);
+    }
+
+    @Override
+    public void onClick(int position) {
+        segmentFeedersList.get(position);
+        Intent i = new Intent(this, DetailSegmentFeeder.class);
+        startActivity(i);
     }
 }

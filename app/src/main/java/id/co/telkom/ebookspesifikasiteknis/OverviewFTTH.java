@@ -3,7 +3,6 @@ package id.co.telkom.ebookspesifikasiteknis;
 import android.os.Bundle;
 
 import android.view.View;
-import android.webkit.WebView;
 
 import androidx.appcompat.app.AppCompatActivity;
 

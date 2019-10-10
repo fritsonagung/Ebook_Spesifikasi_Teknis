@@ -115,8 +115,8 @@ public class PresenterSegmentFeederImp implements PresenterSegmentFeeder {
                 "bermacam- macam yaitu 1:2, 1:4, 1:8,1:16,1:32, dan 1:64, spesifikasi teknis " +
                 "merefer (STEL-L -047- 2008 Ver1). Dan ada juga yang inputnya 2 seperti 2:16 dan 2:32" +
                 "Direkomendasikan digunakan di Telkom sampai 1:32 secara total ( System) Aplikasinya :\n" +
-                "1.One stage → 1:32\n" +
-                "2.Two Stage → 1:2 dan 1:16 atau 1:4 dan 1:8, sehingga yang dipasang di ODC hanya" +
+                "1.One stage : 1:32\n" +
+                "2.Two Stage : 1:2 dan 1:16 atau 1:4 dan 1:8, sehingga yang dipasang di ODC hanya" +
                 " 1:2 dan 1:4 saja.\n" +
                 "Contoh perangkat splitter dapat dilihat pada gambar dibawah.");
         segmentFeeder5.setGambar(R.drawable.splitter);

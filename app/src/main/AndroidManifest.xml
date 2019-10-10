@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.co.telkom.ebookspesifikasiteknis">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DetailSegmentFeeder"></activity>
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,13 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuUtama"/>
-        <activity android:name=".OverviewFTTH"/>
-        <activity android:name=".SegmentFeeder"/>
-        <activity android:name=".SegmentDistribusi"/>
-        <activity android:name=".SegmentDrop"/>
-        <activity android:name=".SimulasiPowerLink"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".MenuUtama" />
+        <activity android:name=".OverviewFTTH" />
+        <activity android:name=".SegmentFeeder" />
+        <activity android:name=".SegmentDistribusi" />
+        <activity android:name=".SegmentDrop" />
+        <activity
+            android:name=".SimulasiPowerLink"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

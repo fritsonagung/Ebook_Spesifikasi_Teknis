@@ -24,7 +24,7 @@ public class PresenterSegmentFeederImp implements PresenterSegmentFeeder {
         segmentFeeder.setMateri_segment_feeder("FTM adalah perangkat yang berfungsi untuk mengelola terminasi dan" +
                 " koneksi kabel fiber optik antar perangkat aktif baik perangkat transmisi maupun" +
                 " akses, sebagai titik terminasi dari kabel fiber optik OSP dan sebagai titik" +
-                " koneksi antara perangkat aktif.\n\n Komponen utama dari FTM terdiri dari Rack, " +
+                " koneksi antara perangkat aktif.\n\nKomponen utama dari FTM terdiri dari Rack, " +
                 "Optical Distribution Frame (ODF) / Fiber Termination Box (FTB) sebagai terminasi " +
                 "kabel optik yang dilengkapi dengan fiber duct atau fiber guide, untuk memudahkan" +
                 " proses administrasi perkabelan, operasi dan pemeliharaan jaringan kabel optik.\n\n" +

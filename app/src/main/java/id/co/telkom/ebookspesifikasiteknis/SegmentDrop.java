@@ -1,5 +1,6 @@
 package id.co.telkom.ebookspesifikasiteknis;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -17,7 +18,8 @@ import id.co.telkom.ebookspesifikasiteknis.presenter.PresenterSegmentDropImp;
 import id.co.telkom.ebookspesifikasiteknis.view.ViewSegmentDrop;
 
 
-public class SegmentDrop extends AppCompatActivity implements ViewSegmentDrop {
+public class SegmentDrop extends AppCompatActivity implements ViewSegmentDrop,
+        AdapterSegmentDrop.OnCallbackListener {
 
     private List<ModelSegmentDrop> segmentDropList = new ArrayList<>();
     private PresenterSegmentDrop presenter;
@@ -52,7 +54,8 @@ public class SegmentDrop extends AppCompatActivity implements ViewSegmentDrop {
         recyclerView = findViewById(R.id.rc_drop);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new AdapterSegmentDrop(segmentDropList);
+        adapter = new AdapterSegmentDrop(this, segmentDropList, this);
+        recyclerView.setAdapter(adapter);
         recyclerView.setAdapter(adapter);
 
         presenter.load();
@@ -63,5 +66,20 @@ public class SegmentDrop extends AppCompatActivity implements ViewSegmentDrop {
     public void onLoad(List<ModelSegmentDrop> segmentDrops) {
         segmentDropList.clear();
         segmentDropList.addAll(segmentDrops);
+    }
+
+    @Override
+    public void onClick(int position) {
+        segmentDropList.get(position);
+        Intent i = new Intent(this, DetailSegmentDrop.class);
+        startActivity(i);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(this, MenuUtama.class);
+        finishAffinity();
+        finish();
+        startActivity(i);
     }
 }

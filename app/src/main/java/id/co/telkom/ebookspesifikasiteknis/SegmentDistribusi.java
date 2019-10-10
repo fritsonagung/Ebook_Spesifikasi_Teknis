@@ -1,5 +1,6 @@
 package id.co.telkom.ebookspesifikasiteknis;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -17,7 +18,8 @@ import id.co.telkom.ebookspesifikasiteknis.presenter.PresenterSegmentDistribusiI
 import id.co.telkom.ebookspesifikasiteknis.view.ViewSegmentDistribusi;
 
 
-public class SegmentDistribusi extends AppCompatActivity implements ViewSegmentDistribusi {
+public class SegmentDistribusi extends AppCompatActivity implements ViewSegmentDistribusi,
+        AdapterSegmentDistribusi.OnCallbackListener {
 
     private List<ModelSegmentDistribusi> segmentDistribusisList = new ArrayList<>();
     private PresenterSegmentDistribusi presenter;
@@ -52,7 +54,8 @@ public class SegmentDistribusi extends AppCompatActivity implements ViewSegmentD
         recyclerView = findViewById(R.id.rc_distribusi);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new AdapterSegmentDistribusi(segmentDistribusisList);
+        adapter = new AdapterSegmentDistribusi(this, segmentDistribusisList, this);
+        recyclerView.setAdapter(adapter);
         recyclerView.setAdapter(adapter);
 
 
@@ -64,5 +67,20 @@ public class SegmentDistribusi extends AppCompatActivity implements ViewSegmentD
     public void onLoad(List<ModelSegmentDistribusi> segmentDistribusis) {
         segmentDistribusisList.clear();
         segmentDistribusisList.addAll(segmentDistribusis);
+    }
+
+    @Override
+    public void onClick(int position) {
+        segmentDistribusisList.get(position);
+        Intent i = new Intent(this, DetailSegmentDistribusi.class);
+        startActivity(i);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(this, MenuUtama.class);
+        finishAffinity();
+        finish();
+        startActivity(i);
     }
 }

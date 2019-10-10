@@ -1,11 +1,37 @@
 package id.co.telkom.ebookspesifikasiteknis.model;
 
-public class ModelSegmentDrop {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class ModelSegmentDrop implements Parcelable {
 
     private int id;
     private String judul_segment_drop;
     private String materi_segment_drop;
     private int gambar;
+
+    public ModelSegmentDrop(Parcel in) {
+        id = in.readInt();
+        judul_segment_drop = in.readString();
+        materi_segment_drop = in.readString();
+        gambar = in.readInt();
+    }
+
+    public static final Creator<ModelSegmentDrop> CREATOR = new Creator<ModelSegmentDrop>() {
+        @Override
+        public ModelSegmentDrop createFromParcel(Parcel in) {
+            return new ModelSegmentDrop(in);
+        }
+
+        @Override
+        public ModelSegmentDrop[] newArray(int size) {
+            return new ModelSegmentDrop[size];
+        }
+    };
+
+    public ModelSegmentDrop() {
+
+    }
 
     public int getId() {
         return id;
@@ -37,5 +63,18 @@ public class ModelSegmentDrop {
 
     public void setGambar(int gambar) {
         this.gambar = gambar;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(judul_segment_drop);
+        dest.writeString(materi_segment_drop);
+        dest.writeInt(gambar);
     }
 }

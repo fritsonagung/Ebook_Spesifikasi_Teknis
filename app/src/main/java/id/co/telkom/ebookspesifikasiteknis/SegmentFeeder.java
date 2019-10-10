@@ -73,4 +73,12 @@ public class SegmentFeeder extends AppCompatActivity implements ViewSegmentFeede
         Intent i = new Intent(this, DetailSegmentFeeder.class);
         startActivity(i);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(this, MenuUtama.class);
+        finishAffinity();
+        finish();
+        startActivity(i);
+    }
 }

@@ -3,19 +3,21 @@ package id.co.telkom.ebookspesifikasiteknis;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import id.co.telkom.ebookspesifikasiteknis.model.ModelSegmentFeeder;
+import com.bumptech.glide.Glide;
 
 public class DetailSegmentFeeder extends AppCompatActivity {
 
-    private TextView judul, materi;
+    private TextView judul, isi;
     private ImageView gambar;
-    private int image_res;
-    private String judul_feeder,materi_feeder;
+    private String uri_gambar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,21 +42,18 @@ public class DetailSegmentFeeder extends AppCompatActivity {
             }
         });
 
-        Intent i = getIntent();
-        ModelSegmentFeeder segmentFeeder = i.getParcelableExtra("Segment Feeder Item");
-
-        judul_feeder = segmentFeeder.getJudul_segment_feeder();
-        materi_feeder = segmentFeeder.getMateri_segment_feeder();
-        image_res = segmentFeeder.getGambar();
 
         judul = findViewById(R.id.txt_judul);
-        judul.setText(judul_feeder);
-
-        materi = findViewById(R.id.txt_materi);
-        materi.setText(materi_feeder);
-
+        isi = findViewById(R.id.txt_isi);
         gambar = findViewById(R.id.img_gambar);
-        gambar.setImageResource(image_res);
+
+        Intent i = getIntent();
+
+        judul.setText(i.getStringExtra("judul_artikel"));
+        isi.setText(i.getStringExtra("isi_artikel"));
+
+        uri_gambar = i.getStringExtra("gambar_artikel");
+        Glide.with(this).load(uri_gambar).into(gambar);
 
     }
 

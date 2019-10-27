@@ -22,13 +22,12 @@ public class MenuUtama extends AppCompatActivity {
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setTitle("Menu Utama");
-        
+
         ftth = findViewById(R.id.button_overview_ftth);
         ftth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuUtama.this, OverviewFTTH.class);
-                startActivity(intent);
+
             }
         });
 
@@ -45,8 +44,7 @@ public class MenuUtama extends AppCompatActivity {
         distribusi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuUtama.this, SegmentDistribusi.class);
-                startActivity(intent);
+
             }
         });
 
@@ -54,8 +52,7 @@ public class MenuUtama extends AppCompatActivity {
         drop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuUtama.this, SegmentDrop.class);
-                startActivity(intent);
+
             }
         });
 

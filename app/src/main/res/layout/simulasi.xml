@@ -300,16 +300,6 @@
                     tools:ignore="UnknownId" />
 
             </RelativeLayout>
-            <Button
-                android:id="@+id/button_hitungrx"
-                android:layout_width="@dimen/_200sdp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-                android:background="@drawable/bg_button_select"
-                android:fontFamily="@font/nunito_regular"
-                android:text="Hitung RX"
-                android:textColor="@color/putih"
-                android:textSize="@dimen/_15ssp" />
 
             <RelativeLayout
                 android:id="@+id/layout_rx"
@@ -355,6 +345,16 @@
 
             </RelativeLayout>
 
+            <Button
+                android:id="@+id/button_hitungrx"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/bg_button_select"
+                android:fontFamily="@font/nunito_regular"
+                android:text="Hitung RX"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/_15ssp" />
 
         </LinearLayout>
 

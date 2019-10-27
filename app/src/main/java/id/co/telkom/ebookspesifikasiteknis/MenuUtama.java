@@ -63,7 +63,7 @@ public class MenuUtama extends AppCompatActivity {
         simulasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuUtama.this, SimulasiPowerLink.class);
+                Intent intent = new Intent(MenuUtama.this, KalkulatorPowerLinkBudget.class);
                 startActivity(intent);
             }
         });

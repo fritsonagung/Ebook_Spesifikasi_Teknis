@@ -171,7 +171,7 @@
                         android:fontFamily="@font/nunito_regular"
                         android:gravity="center_vertical"
                         android:layout_gravity="center"
-                        android:text="@string/simulasi_powerlink_budget"
+                        android:text="@string/kalkulator_plb"
                         android:textColor="@color/putih"
                         android:textSize="@dimen/_15ssp" />
 

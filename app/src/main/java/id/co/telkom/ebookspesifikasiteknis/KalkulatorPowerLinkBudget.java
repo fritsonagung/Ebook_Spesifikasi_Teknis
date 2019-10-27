@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.DecimalFormat;
 
 
-public class SimulasiPowerLink extends AppCompatActivity {
+public class KalkulatorPowerLinkBudget extends AppCompatActivity {
 
     private RelativeLayout hasilrx;
     private double tx, pk, sbn, knk, rx;
@@ -22,7 +22,7 @@ public class SimulasiPowerLink extends AppCompatActivity {
     private String tx_str, pk_str, sbn_str, knk_str;
     private EditText edt_tx, edt_pk, edt_sbn, edt_knk;
     private EditText et_hasilpk, et_hasilsbn, et_hasilknk, et_hasilrx;
-    private TextView txt_rx;
+    private TextView hitung_txt_rx, txt_rx;
     public Button btn_hitungrx;
     final double def_pk = 0.35;
     final double def_sbn = 0.1;
@@ -31,11 +31,11 @@ public class SimulasiPowerLink extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.simulasi);
+        setContentView(R.layout.kalkulator);
 
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Simulasi Power Link Budget");
+        setTitle("Kalkulator Power Link Budget");
 
 
         // Tambah panah kembali
@@ -55,6 +55,9 @@ public class SimulasiPowerLink extends AppCompatActivity {
         hasilrx = findViewById(R.id.layout_rx);
         hasilrx.setVisibility(View.GONE);
 
+        txt_rx = findViewById(R.id.txt_rx);
+        txt_rx.setVisibility(View.GONE);
+
         edt_tx = findViewById(R.id.et_tx);
         edt_pk = findViewById(R.id.et_pk);
         edt_sbn = findViewById(R.id.et_js);
@@ -69,7 +72,7 @@ public class SimulasiPowerLink extends AppCompatActivity {
         et_hasilknk = findViewById(R.id.et_hsl_jk);
         et_hasilknk.setVisibility(View.GONE);
 
-        txt_rx = findViewById(R.id.txt_rumus_rx);
+        hitung_txt_rx = findViewById(R.id.txt_rumus_rx);
 
         et_hasilrx = findViewById(R.id.et_hsl_rx);
 
@@ -109,7 +112,7 @@ public class SimulasiPowerLink extends AppCompatActivity {
 
             rx = tx - (hasil_pk + hasil_sbn + hasil_knk);
 
-            txt_rx.setText("Rx = " + tx_str + " - (" + new DecimalFormat("##.##").format(hasil_pk) + " + "
+            hitung_txt_rx.setText("Rx = " + tx_str + " - (" + new DecimalFormat("##.##").format(hasil_pk) + " + "
                     + new DecimalFormat("##.##").format(hasil_sbn) + " + "
                     + new DecimalFormat("##.##").format(hasil_knk) + ")");
 
@@ -125,10 +128,14 @@ public class SimulasiPowerLink extends AppCompatActivity {
 
             et_hasilrx.setText(Double.toString(Double.parseDouble(new DecimalFormat("##.##").format(rx))));
 
+            edt_knk.clearFocus();
+            txt_rx.setVisibility(View.VISIBLE);
             hasilrx.setVisibility(View.VISIBLE);
+            hasilrx.requestFocus();
+
 
         } else {
-            Toast.makeText(SimulasiPowerLink.this, "Field inputan tidak boleh kosong!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(KalkulatorPowerLinkBudget.this, "Field inputan tidak boleh kosong!", Toast.LENGTH_SHORT).show();
         }
     }
 }

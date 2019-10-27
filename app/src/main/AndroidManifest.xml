@@ -30,7 +30,7 @@
         <activity android:name=".DetailDistribusi" />
         <activity android:name=".DetailDrop" />
         <activity
-            android:name=".SimulasiPowerLink"
+            android:name=".KalkulatorPowerLinkBudget"
             android:screenOrientation="portrait" />
     </application>
 

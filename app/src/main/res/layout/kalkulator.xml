@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/abu_abu_muda"
-    tools:context=".SimulasiPowerLink">
+    tools:context=".KalkulatorPowerLinkBudget">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -299,6 +299,22 @@
                     android:textColorHint="@color/abu_abu"
                     tools:ignore="UnknownId" />
 
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_rx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:fontFamily="@font/nunito_regular"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Hasil Rx"
+                    android:textColor="@color/hitam"
+                    android:textSize="@dimen/_15ssp" />
             </RelativeLayout>
 
             <RelativeLayout

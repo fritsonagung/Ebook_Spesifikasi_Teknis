@@ -22,7 +22,7 @@
     <string name="telkom_indonesia">Telkom Indonesia</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="menu_share">Share</string>
-    <string name="simulasi_powerlink_budget">Simulasi Powerlink Budget</string>
+    <string name="kalkulator_plb">Kalkulator Power Link Budget</string>
     <string name="segment_drop">Segment Drop</string>
     <string name="segment_distribusi">Segment Distribusi</string>
     <string name="segment_feeder">Segment Feeder</string>

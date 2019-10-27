@@ -50,7 +50,7 @@ public class DetailOverviewFTTH extends AppCompatActivity {
         isi.setText(i.getStringExtra("isi_artikel"));
 
         uri_gambar = i.getStringExtra("gambar_artikel");
-        Glide.with(this).load(uri_gambar).into(gambar);
+        Glide.with(this).load(uri_gambar).placeholder(R.drawable.element).into(gambar);
 
     }
 

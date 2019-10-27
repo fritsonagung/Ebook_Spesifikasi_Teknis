@@ -8,30 +8,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
-import id.co.telkom.ebookspesifikasiteknis.adapter.AdapterFeeder;
+import id.co.telkom.ebookspesifikasiteknis.adapter.AdapterDrop;
 import id.co.telkom.ebookspesifikasiteknis.database.DatabaseOpenHelper;
 import id.co.telkom.ebookspesifikasiteknis.model.ModelArtikel;
 
-public class SegmentFeeder extends AppCompatActivity implements AdapterFeeder.OnCallbackListener{
+public class SegmentDrop extends AppCompatActivity implements AdapterDrop.OnCallbackListener{
 
-    private AdapterFeeder adapter;
+    private AdapterDrop adapter;
     private RecyclerView recyclerView;
     private DatabaseOpenHelper db;
-    private List<ModelArtikel> feederList = new ArrayList<>();
+    private List<ModelArtikel> dropList = new ArrayList<>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.segment_feeder);
+        setContentView(R.layout.segment_drop);
 
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Segment Feeder");
+        setTitle("Segment Drop");
 
 
         // Tambah panah kembali
@@ -49,11 +48,11 @@ public class SegmentFeeder extends AppCompatActivity implements AdapterFeeder.On
 
         db = new DatabaseOpenHelper(this);
 
-        feederList.addAll(db.getFeeder());
+        dropList.addAll(db.getDrop());
 
-        adapter = new AdapterFeeder(feederList, this, this);
+        adapter = new AdapterDrop(dropList, this, this);
 
-        recyclerView = findViewById(R.id.rc_feeder);
+        recyclerView = findViewById(R.id.rc_drop);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
@@ -61,8 +60,8 @@ public class SegmentFeeder extends AppCompatActivity implements AdapterFeeder.On
 
     @Override
     public void onClick(int position) {
-        feederList.get(position);
-        Intent i = new Intent(this, DetailFeeder.class);
+        dropList.get(position);
+        Intent i = new Intent(this, DetailDrop.class);
         startActivity(i);
     }
 

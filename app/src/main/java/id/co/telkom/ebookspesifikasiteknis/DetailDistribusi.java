@@ -1,19 +1,16 @@
 package id.co.telkom.ebookspesifikasiteknis;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bumptech.glide.Glide;
 
-public class DetailSegmentFeeder extends AppCompatActivity {
+public class DetailDistribusi extends AppCompatActivity {
 
     private TextView judul, isi;
     private ImageView gambar;
@@ -22,11 +19,11 @@ public class DetailSegmentFeeder extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.detail_segment_feeder);
+        setContentView(R.layout.detail_distribusi);
 
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Segment Feeder");
+        setTitle("Segment Distribusi");
 
 
         // Tambah panah kembali
@@ -59,7 +56,7 @@ public class DetailSegmentFeeder extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent i = new Intent(this, SegmentFeeder.class);
+        Intent i = new Intent(this, SegmentDistribusi.class);
         finishAffinity();
         finish();
         startActivity(i);

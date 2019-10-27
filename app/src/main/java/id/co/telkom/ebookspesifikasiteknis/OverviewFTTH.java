@@ -8,30 +8,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
-import id.co.telkom.ebookspesifikasiteknis.adapter.AdapterFeeder;
+import id.co.telkom.ebookspesifikasiteknis.adapter.AdapterOverviewFTTH;
 import id.co.telkom.ebookspesifikasiteknis.database.DatabaseOpenHelper;
 import id.co.telkom.ebookspesifikasiteknis.model.ModelArtikel;
 
-public class SegmentFeeder extends AppCompatActivity implements AdapterFeeder.OnCallbackListener{
+public class OverviewFTTH extends AppCompatActivity implements AdapterOverviewFTTH.OnCallbackListener{
 
-    private AdapterFeeder adapter;
+    private AdapterOverviewFTTH adapter;
     private RecyclerView recyclerView;
     private DatabaseOpenHelper db;
-    private List<ModelArtikel> feederList = new ArrayList<>();
+    private List<ModelArtikel> overviewList = new ArrayList<>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.segment_feeder);
+        setContentView(R.layout.overview_ftth);
 
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Segment Feeder");
+        setTitle("Overview FTTH");
 
 
         // Tambah panah kembali
@@ -49,11 +48,11 @@ public class SegmentFeeder extends AppCompatActivity implements AdapterFeeder.On
 
         db = new DatabaseOpenHelper(this);
 
-        feederList.addAll(db.getFeeder());
+        overviewList.addAll(db.getOverviewFTTH());
 
-        adapter = new AdapterFeeder(feederList, this, this);
+        adapter = new AdapterOverviewFTTH (overviewList, this, this);
 
-        recyclerView = findViewById(R.id.rc_feeder);
+        recyclerView = findViewById(R.id.rc_overview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
@@ -61,8 +60,8 @@ public class SegmentFeeder extends AppCompatActivity implements AdapterFeeder.On
 
     @Override
     public void onClick(int position) {
-        feederList.get(position);
-        Intent i = new Intent(this, DetailFeeder.class);
+        overviewList.get(position);
+        Intent i = new Intent(this, DetailOverviewFTTH.class);
         startActivity(i);
     }
 

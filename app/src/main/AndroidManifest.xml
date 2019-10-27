@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".DetailSegmentFeeder" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +21,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuUtama" />
+        <activity android:name=".OverviewFTTH" />
         <activity android:name=".SegmentFeeder" />
+        <activity android:name=".SegmentDistribusi" />
+        <activity android:name=".SegmentDrop" />
+        <activity android:name=".DetailOverviewFTTH" />
+        <activity android:name=".DetailFeeder" />
+        <activity android:name=".DetailDistribusi" />
+        <activity android:name=".DetailDrop" />
         <activity
             android:name=".SimulasiPowerLink"
             android:screenOrientation="portrait" />

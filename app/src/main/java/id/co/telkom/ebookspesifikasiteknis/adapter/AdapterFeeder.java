@@ -13,11 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import id.co.telkom.ebookspesifikasiteknis.DetailSegmentFeeder;
+import id.co.telkom.ebookspesifikasiteknis.DetailFeeder;
 import id.co.telkom.ebookspesifikasiteknis.R;
 import id.co.telkom.ebookspesifikasiteknis.model.ModelArtikel;
 
-public class AdapterSegmentFeeder extends RecyclerView.Adapter<AdapterSegmentFeeder.ViewHolder> {
+public class AdapterFeeder extends RecyclerView.Adapter<AdapterFeeder.ViewHolder> {
 
     private List<ModelArtikel> mfeederList;
     private Context mcontext;
@@ -47,7 +47,7 @@ public class AdapterSegmentFeeder extends RecyclerView.Adapter<AdapterSegmentFee
         public void onClick(View v) {
             mlistener.onClick(getAdapterPosition());
 
-            Intent intent = new Intent(mcontext, DetailSegmentFeeder.class);
+            Intent intent = new Intent(mcontext, DetailFeeder.class);
             intent.putExtra("id_artikel", mfeederList.get(getAdapterPosition()).getId_artikel());
             intent.putExtra("judul_artikel", mfeederList.get(getAdapterPosition()).getJudul_artikel());
             intent.putExtra("isi_artikel", mfeederList.get(getAdapterPosition()).getIsi_artikel());
@@ -56,7 +56,7 @@ public class AdapterSegmentFeeder extends RecyclerView.Adapter<AdapterSegmentFee
         }
     }
 
-    public AdapterSegmentFeeder(List<ModelArtikel> feederList, Context context, OnCallbackListener listener) {
+    public AdapterFeeder(List<ModelArtikel> feederList, Context context, OnCallbackListener listener) {
         mfeederList = feederList;
         mcontext = context;
         mlistener = listener;
@@ -64,7 +64,7 @@ public class AdapterSegmentFeeder extends RecyclerView.Adapter<AdapterSegmentFee
 
     @NonNull
     @Override
-    public AdapterSegmentFeeder.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AdapterFeeder.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_list, parent, false);
@@ -73,7 +73,7 @@ public class AdapterSegmentFeeder extends RecyclerView.Adapter<AdapterSegmentFee
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AdapterSegmentFeeder.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AdapterFeeder.ViewHolder holder, int position) {
         final ModelArtikel segmentFeeder = mfeederList.get(position);
         holder.judul_artikel.setText(segmentFeeder.getJudul_artikel());
     }

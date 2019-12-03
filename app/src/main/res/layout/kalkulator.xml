@@ -96,6 +96,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Km"
+                        android:textColor="@color/putih"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:fontFamily="@font/nunito_regular"
@@ -280,7 +292,7 @@
                         android:fontFamily="@font/nunito_regular"
                         android:gravity="center_horizontal"
                         android:padding="@dimen/_5sdp"
-                        android:text="0.35"
+                        android:text="0.25"
                         android:textColor="@color/putih"
                         android:textSize="@dimen/_15ssp" />
 
